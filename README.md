@@ -45,8 +45,9 @@ A seguinte codificação adotada pelo IBGE deverá ser utilizada para representa
 
 Apresentar ```{ "cidade": "Alta Floresta D'Oeste", "IBGE":  "1100015", "ESTADO": Rondônia, "ID": 11 }```
 
-```$location = file_get_contents("https://raw.githubusercontent.com/GestaoPublico/IBGE/master/11/1100015.json");
-$json = json_decode($location, true);
+```$location = file_get_contents("https://gist.githubusercontent.com/letanure/3012978/raw/2e43be5f86eef95b915c1c804ccc86dc9790a50a/estados-cidades2.json");
+
+$json= json_decode(file_get_contents("https://raw.githubusercontent.com/GestaoPublico/IBGE/master/11/1100015.json"));
 echo $json->cidade.'<br>';
 echo $json->IBGE.'<br>';
 echo $json->ESTADO.'<br>';
